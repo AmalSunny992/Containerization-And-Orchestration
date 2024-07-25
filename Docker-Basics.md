@@ -112,6 +112,26 @@ docker run -d -p 80:80 --name <container_name> <image_name>
 # Example
 docker run -d -p 80:80 --name my-nginx nginx
 ```
+The docker run command allows you to run Docker containers with various options. 
+Here are some commonly used options:
+
+	•	-d: Run container in detached mode (in the background).
+	•	-i: Keep STDIN open even if not attached.
+	•	-t: Allocate a pseudo-TTY (terminal).
+	•	-p: Publish a container’s port(s) to the host.
+	•	--name: Assign a name to the container.
+	•	-v: Bind mount a volume.
+	•	-e: Set environment variables.
+	•	--rm: Automatically remove the container when it exits.
+	•	--network: Connect a container to a network.
+
+Example usage:
+```
+docker run -d -p 8080:80 --name mycontainer nginx
+```
+
+This runs an Nginx container in the background, maps port 80 of the container to port 8080 on the host, and names the container mycontainer.
+
 
 #### List Running Containers
 List all running containers.
@@ -155,13 +175,27 @@ docker logs my-nginx
 ```
 
 #### Execute Commands in a Container
-Run a command inside a running container.
+
+The docker exec command is used to run commands inside an existing container. 
+Here are some commonly used options:
+
+	•	-d, --detach: Run command in the background.
+	•	-i, --interactive: Keep STDIN open even if not attached.
+	•	-t, --tty: Allocate a pseudo-TTY.
+	•	-u, --user: Username or UID to run the command as.
+	•	--workdir: Working directory inside the container.
+	•	-e, --env: Set environment variables.
 
 ```sh
 docker exec -it <container_name> <command>
-# Example
-docker exec -it my-nginx /bin/bash
+
+Example usage:
+
+docker exec -it mycontainer /bin/bash
 ```
+
+This runs an interactive Bash shell inside the mycontainer container.
+
 
 ## Summary
 Docker simplifies the development, shipping, and deployment of applications using containerization. Docker images serve as templates for creating containers, which are isolated environments for running applications. Mastering Docker commands is essential for effectively managing Docker images and containers, enabling efficient development workflows and consistent application deployments.
