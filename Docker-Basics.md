@@ -6,7 +6,7 @@
 Docker images are immutable templates used to create containers. They contain everything needed to run an application, including the code, runtime, libraries, environment variables, and configuration files.
 
 ### Key Concepts
-**Layers:** Images are built in layers, each representing a set of file changes or additions. Layers are stacked, and each layer is a read-only snap```shot of the filesystem.
+**Layers:** Images are built in layers, each representing a set of file changes or additions. Layers are stacked, and each layer is a read-only snapshot of the filesystem.
 
 **Dockerfile:** A script containing a series of instructions on how to build a Docker image. Each instruction in a Dockerfile creates a new layer in the image.
 
@@ -160,8 +160,8 @@ Run a command inside a running container.
 ```sh
 docker exec -it <container_name> <command>
 # Example
-docker exec -it my-nginx /bin/ba```sh
+docker exec -it my-nginx /bin/bash
 ```
 
 ## Summary
-Docker simplifies the development, ```shipping, and deployment of applications using containerization. Docker images serve as templates for creating containers, which are isolated environments for running applications. Mastering Docker commands is essential for effectively managing Docker images and containers, enabling efficient development workflows and consistent application deployments.
+Docker simplifies the development, shipping, and deployment of applications using containerization. Docker images serve as templates for creating containers, which are isolated environments for running applications. Mastering Docker commands is essential for effectively managing Docker images and containers, enabling efficient development workflows and consistent application deployments.
